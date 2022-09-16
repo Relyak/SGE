@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        media=0
+        media=parseInt(media)
+        
+        i=0
+        
+        do{
+            nota=0
+            
+            do{
+                nota=parseInt(window.prompt("dime la nota"))
+            if(isNaN(nota)){
+                alert("patata")
+                
+                
+            }else {
+                    if((nota>0&&nota<10)){
+                    media=media+nota
+                    i++
+                    }
+                }
+            
+            }while(nota<1||nota>10)
+       }while(i<6)
+       final=parseInt(media/6)
+       switch(final){
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        document.write(final+" suspenso")
+        break
+        case 5:
+        case 6:
+        document.write(final+" aprobado")
+        break
+        case 7:
+        case 8:
+        document.write(final+" notable")
+        break
+        case 9:
+        case 10:
+        document.write(final+" sobresaliente")
+        break
+       }
+       
+
+     
+
+
+    </script>
+</body>
+</html>
