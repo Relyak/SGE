@@ -45,6 +45,7 @@
       //funcion1 document.getElementById('boton').addEventListener('click',comprobar,false)
       document.getElementById('boton3').addEventListener('click',anyadir2,false)
       
+      
       //referencia document.getElementById('boton2').addEventListener('click',anyadir,false)
        /* funcion1 para comprobar que este todo bien
        function comprobar(){
@@ -82,22 +83,42 @@
             document.body.appendChild(gato)
         }*/
         function anyadir2(){
+           
             gato = document.createElement('img')
             perro = document.createElement('img')
             loro = document.createElement('img')
+            
             gato.src='https://www.tugatobengali.com/wp-content/uploads/2022/02/gatokohana.jpg'
             perro.src='https://ichef.bbci.co.uk/news/800/cpsprodpb/15665/production/_107435678_perro1.jpg.webp'
             loro.src='https://estaticos-cdn.elperiodico.com/clip/9a36bb77-0c88-4b3c-a7dc-f3d41dd85987_alta-libre-aspect-ratio_default_0.jpg'
-            if(document.querySelector('#gato').checked == true)
-            document.body.appendChild(gato)
-            else if(document.querySelector('#perro').checked == true)
-            document.body.appendChild(perro)
-            else if(document.querySelector('#loro').checked == true)
-            document.body.appendChild(loro)
+            gato.setAttribute("id", "felino")
+            perro.setAttribute("id", "canis_lupus")
+            loro.setAttribute("id", "loro_loro")
+            if(document.querySelector('#gato').checked == true){
+                document.body.appendChild(gato)
+                document.getElementById("felino").addEventListener('click',felino,false)
+            }
+            else if(document.querySelector('#perro').checked == true){
+                document.body.appendChild(perro)
+                document.getElementById("canis_lupus").addEventListener('click',canis_lupus,false)
+            }
+            else if(document.querySelector('#loro').checked == true){
+                document.body.appendChild(loro)
+                document.getElementById("loro_loro").addEventListener('click',loro_loro,false)
+            }
             
-            
-           
+        
         }
+        function felino(){
+             window.location.assign('https://es.wikipedia.org/wiki/Cat_(Unix)')
+        }
+        function canis_lupus(){
+            window.location.assign('https://es.wikipedia.org/wiki/Canis_lupus')
+        }
+        function loro_loro(){
+            window.location.assign('https://es.wikipedia.org/wiki/Psittacoidea')
+        }
+        
         
         
         
