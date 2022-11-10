@@ -8,11 +8,18 @@
 </head>
 <body>
     <p>Pokémon<select name="" id="pokemon">
+        <option value=""></option>
         <option value="pikachu">Pikachu</option>
         <option value="golduck">Golduck</option>
         <option value="dragonite">Dragonite</option>
         <option value="blastoise">Blastoise</option>
     </select><input type="button" name="Go!" value="Go!" id="boton"></p>
+
+    <p id="textoP">Pokémon2
+        <input type="text" name="" id="pokemon2">
+        <input type="button" value="buscar" name="buscar" id="boton2">
+
+    </p>
     
     <div>Nombre<p id="nombre"></p></div> <br><br>
     <div>Habilidad<p id="habilidad"></p></div> <br><br>
@@ -23,13 +30,15 @@
 </body>
 <script>
    document.getElementById("boton").addEventListener("click",elegirPokemon,false);
+   document.getElementById("boton2").addEventListener("click",elegirPokemon,false);
 
-
- 
+    
      
       function elegirPokemon(){
-   
-            fetch('https://pokeapi.co/api/v2/pokemon/'+document.getElementById("pokemon").value)
+            let textoPe=document.getElementById("textoP").innerHTML
+            fetch('https://pokeapi.co/api/v2/pokemon/'+
+            ((document.getElementById("pokemon").value)||
+            (textoPe=document.getElementById("pokemon2").value)))
             .then((res)=>res.json())
             .then((data)=> {
                 console.log(data)
