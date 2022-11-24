@@ -4,5 +4,11 @@
             "path": "d:\\Users\\kayle\\Desktop\\git"
         }
     ],
-    "settings": {}
+    "settings": {
+        "java.project.sourcePaths": [
+            "PSP/PSPjava/ejemplox",
+            "PSP/PSPjava/ejemplos",
+            "PSP/PSPjava/ejemploNotify"
+        ]
+    }
 }
