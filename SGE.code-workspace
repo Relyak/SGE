@@ -9,6 +9,9 @@
             "PSP/PSPjava/ejemplox",
             "PSP/PSPjava/ejemplos",
             "PSP/PSPjava/ejemploNotify"
-        ]
+        ],
+        "files.associations": {
+            "repasoC.C": "cpp"
+        }
     }
 }
